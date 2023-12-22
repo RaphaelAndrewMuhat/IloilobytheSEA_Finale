@@ -1,0 +1,106 @@
+.team-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: 1px solid black;
+}
+
+.modal-content {
+  position: relative;
+  /* Add this line to make the close button position relative to this container */
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.teamclose {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 10;
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 50px;
+}
+
+
+.teamclose:hover {
+  background-color: #ef9b0f;
+  color: black;
+
+}
+
+.modal-content img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid #161515;
+}
+
+
+
+
+
+
+.usercontainer {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  height: 100%;
+
+
+}
+
+.name {
+  display: inline-block;
+}
+
+.teamimage {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px;
+  /* Adjust the size as needed */
+  height: 150px;
+  /* Adjust the size as needed */
+  margin: 20px;
+
+}
+
+.teamimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Prevent image overlap */
+  border-radius: 50%;
+}
+
+.teamimage img:hover {
+  transform: scale(1.05);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.explorecontainer {
+  background-color: rgba(246, 217, 217, 0.614);
+
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Iloilo By The Sea - Home</title>
+    <link href="logo.jpg" rel="icon">
+    <link href="logo.jpg" rel="apple-touch-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    
+    <link href="nav.css" rel="stylesheet">
+    <link href="about.css" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- Navbar Container -->
+    <div class="container">
+        <img id="logo" src="logo.jpg">
+        <nav id="navbar" class="navbar">
+            <ul id="menu">
+                <li><a href="Homepage.html">Home</a></li>
+                <li><a href="user.html">Explore Iloilo</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+    </div>
+
+    <!-- Content Container -->
+    <div class="explorecontainer">
+        <div class="usercontainer">
+            <!-- About Us Section -->
+            <h1>About Us</h1>
+            <p>
+                Welcome to "Iloilo By The Sea," a captivating journey into the heart of Iloilo's coastal wonders. At "Iloilo By The Sea," we are passionate about showcasing the unparalleled beauty and cultural richness that the city of Iloilo and its surrounding areas have to offer. Our mission is to serve as your dedicated guide, inviting you to embark on a unique exploration of the breathtaking landscapes, pristine beaches, and vibrant communities that define the essence of Iloilo. Whether you are a traveler seeking hidden gems, a culture enthusiast eager to delve into local traditions, or simply someone ready to unwind by the sea, we are here to curate an unforgettable experience for you. Our platform is more than just a virtual guide; it's a celebration of Iloilo's natural wonders, historical treasures, and the warm hospitality of its people. Join us as we navigate the coastal charm of Iloilo, discover its hidden gems, and create lasting memories along the shores of this remarkable destination. "Iloilo By The Sea" is not just a website; it's an invitation to immerse yourself in the enchanting tapestry of Iloilo's coastal magic.
+            </p>
+            <hr>
+
+            <!-- Team Section -->
+            <h1>Our Team</h1>
+            <div class="name">
+                <h4>Jethro Delima</h4>
+                <div class="teamimage" onclick="openTeamModal('Jethro Delima', 'Back-end Developer', 'jethro.delima@wvsu.edu.ph', '123-456-789', 'jeth.jpg')">
+                    <img src="jeth.jpg" alt="Team Member 1">
+                </div>
+            </div>
+            <div class="name">
+                <h4>Jamaica Diaz</h4>
+                <div class="teamimage" onclick="openTeamModal('Jamaica Diaz', 'Designer', 'jamaica.diaz@wvsu.edu.ph', '123-456-789', 'jam.jpg')">
+                    <img src="jam.jpg" alt="Team Member 1">
+                </div>
+            </div>
+
+            <div class="name">
+                <h4>Jireh Flavio</h4>
+                <div class="teamimage" onclick="openTeamModal('Jireh Flavio', 'Designer', 'jireh.flavio@wvsu.edu.ph', '123-456-789', 'jireh.jpg')">
+                    <img src="jireh.jpg" alt="Team Member 1">
+                </div>
+            </div>
+            <div class="name">
+                <h4>Jave Fryan Go</h4>
+                <div class="teamimage" onclick="openTeamModal('Jave Fryan Go', 'Back-end Developer', 'javefryan.go@wvsu.edu.ph', '123-456-789', 'jave.jpg')">
+                    <img src="jave.jpg" alt="Team Member 1">
+                </div>
+            </div>
+            <div class="name">
+                <h4>Raphael Andrew Muhat</h4>
+                <div class="teamimage" onclick="openTeamModal('Raphael Andrew Muhat', 'Back-end Developer', 'raphaelandrew.muhat@wvsu.edu.ph', '123-456-789', 'raph.jpg')">
+                    <img src="raph.jpg" alt="Team Member 1">
+                </div>
+            </div>
+            <!-- Add more team members as needed -->
+           
+       </div>
+       
+    </div>
+
+    <div id="teamModal" class="team-modal">
+        <div class="modal-content">
+            <span class="teamclose" onclick="closeTeamModal()">&times;</span>
+            <img id="modalImage" class="modal-image" alt="Team Member Image">
+            <h2 id="modalName"></h2>
+            <p id="modalPosition"></p>
+            <p id="modalEmail"></p>
+            <p id="modalContact"></p>
+        </div>
+    </div>
+
+    <script>
+function openTeamModal(name, position, email, contact, imageUrl) {
+    document.getElementById('modalName').innerText = name;
+    document.getElementById('modalPosition').innerText = position;
+
+    // Create a clickable email link
+    const emailLink = document.createElement('a');
+    emailLink.href = 'mailto:' + email;
+    emailLink.innerText = email;
+
+    // Clear existing content and append the email link
+    const modalEmailElement = document.getElementById('modalEmail');
+    modalEmailElement.innerHTML = '';
+    modalEmailElement.appendChild(emailLink);
+
+    document.getElementById('modalContact').innerText = contact;
+    document.getElementById('modalImage').src = imageUrl;
+
+    document.getElementById('teamModal').style.display = 'flex';
+}
+
+
+        function closeTeamModal() {
+            document.getElementById('teamModal').style.display = 'none';
+        }
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if the user is logged out (you may have a better way to check this)
+            const loggedInUser = localStorage.getItem("loggedInUser");
+
+            // If the user is logged out, redirect to the login page and clear history
+            if (!loggedInUser) {
+                window.location.replace("index.html");
+            } else {
+                // If the user is logged in, proceed with the normal content
+                // Add the rest of your HTML and JavaScript code here
+            }
+        });
+    </script>
+</body>
+</html>
